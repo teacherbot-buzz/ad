@@ -1,4 +1,4 @@
-# accessdenied.app
+# accessdenied
 
 https://teacherbot-buzz.github.io/accessdenied
 
