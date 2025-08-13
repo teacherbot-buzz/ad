@@ -1,5 +1,3 @@
-// TO DO: remove globals; blocked by Firefox/browsers;
-
 var now = new Date;
 var utc_timestamp = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds(), now.getUTCMilliseconds());
 var dataToSend = {
@@ -27,7 +25,7 @@ async function getBuzzData() {
 async function postBuzzData() {
 
     await getBuzzData();
-    
+
     const url = "https://teacherbot.uk/api";
 
     try {
@@ -36,7 +34,6 @@ async function postBuzzData() {
             headers: {
                 "Content-Type": "application/json",
             },
-            // credentials:"include",
             body: JSON.stringify(dataToSend),
         })
         if (!response.ok) {
