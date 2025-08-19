@@ -14,7 +14,7 @@ async function getBuzzData() {
     await fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
         .then(data => {
-            dataToSend = {'utc:': utc_timestamp.toString(), 'site:': site,'ip:': data.ip, 'browser:': navigator.appName, 'browser version:': navigator.appVersion, 'user agent:': navigator.userAgent, 'platform:': navigator.platform, 'language:': navigator.language}; 
+            dataToSend = {'utc:': utc_timestamp.toString(), 'site:': site,'ip:': data.ip, 'browser:': navigator.appName, 'browser version:': navigator.appVersion, 'user agent:': navigator.userAgent, 'platform:': navigator.platform, 'language:': navigator.language, "width:": window.innerWidth, "height:": window.innerHeight}; 
         })
         .catch(error => console.error('Error fetching IP:', error));
     
